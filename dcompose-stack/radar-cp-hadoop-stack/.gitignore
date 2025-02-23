@@ -1,2 +1,3 @@
 /.env
 /output/
+/etc/webserver/.well-known
