@@ -2,6 +2,8 @@
 /webserver/kafka-manager.htpasswd
 /webserver/ip-access-control.conf
 /webserver/optional-services.conf
+/webserver/.well-known/acme-challenge/
+/webserver/.well-known/pki-validation/
 /radar-backend/radar.yml
 /smtp.env
 /rest-api/device-catalog.yml
