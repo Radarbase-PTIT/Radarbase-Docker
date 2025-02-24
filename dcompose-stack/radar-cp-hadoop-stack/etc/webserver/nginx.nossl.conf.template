@@ -104,7 +104,7 @@ http {
 
       proxy_pass         http://kafka-manager:9000;
       proxy_set_header   Host $host;
-    }
-    include optional-services.conf;
+    }    
+    #include optional-services.conf;
   }
 }

@@ -29,8 +29,11 @@ http {
     }
     location ^~ /.well-known {
       allow all;
-      root  /data/letsencrypt/;
+      root /data/letsencrypt;
+      autoindex on;
     }
+    access_log                /var/log/nginx/access.log;
+    error_log                 /var/log/nginx/error.log;
   }
 
   server { # simple reverse-proxy
@@ -53,9 +56,9 @@ http {
     ssl_stapling_verify       on;
     resolver                  8.8.8.8 8.8.4.4;
 
-    ssl_certificate           /etc/letsencrypt/live/localhost/fullchain.pem;
-    ssl_certificate_key       /etc/letsencrypt/live/localhost/privkey.pem;
-    ssl_trusted_certificate   /etc/letsencrypt/live/localhost/chain.pem;
+    ssl_certificate           /etc/letsencrypt/live/localhost/certificate.crt;
+    ssl_certificate_key       /etc/letsencrypt/live/localhost/private.key;
+    ssl_trusted_certificate   /etc/letsencrypt/live/localhost/ca_bundle.crt;
 
     access_log                /var/log/nginx/access.log;
     error_log                 /var/log/nginx/error.log;
