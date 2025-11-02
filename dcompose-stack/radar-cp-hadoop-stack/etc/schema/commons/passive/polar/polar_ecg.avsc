@@ -1,27 +1,12 @@
 {
   "namespace": "org.radarcns.passive.polar",
   "type": "record",
-  "name": "PolarH10Ecg",
-  "doc": "Data from Polar multi-channel electrocardiography electrodes",
+  "name": "PolarEcg",
+  "doc": "Data from ECG in yV.",
   "fields": [
-    { "name": "time", "type": "double", "doc": "Device timestamp in UTC (s)." },
+    { "name": "deviceName", "type": "string", "doc": "Polar device name." },
+    { "name": "time", "type": "double", "doc": "Device timestamp in UTC (ns)." },
     { "name": "timeReceived", "type": "double", "doc": "Device receiver timestamp in UTC (s)." } ,
-    { 
-      "name": "ecg", 
-      "type": {
-         "type": "array",
-         "items": "float"
-      },
-     "doc": "ECG signal (mV)." 
-    },
-    { 
-      "name": "heartRate",
-      "type": {
-         "type": "array",
-         "items": "int"
-      }, 
-      "doc":"Heart rate"
-    },
-    { "name": "measurementTimes", "type": "int", "doc":"Number of measurements when start and stop"}
+    { "name": "ecgSignal", "type": "int", "doc": "ECG signal (yV)." }
   ]
 }
