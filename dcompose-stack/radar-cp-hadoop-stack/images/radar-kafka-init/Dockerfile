@@ -22,7 +22,7 @@ ENV JQ_VERSION=1.5
 RUN curl -L#o /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-${JQ_VERSION}/jq-linux64 \
     && chmod +x /usr/bin/jq
 
-RUN curl -L#o /usr/share/java/avro-tools.jar https://archive.apache.org/dist/avro/avro-1.8.2/java/avro-tools-1.8.2.jar
+RUN curl -k -L#o /usr/share/java/avro-tools.jar https://archive.apache.org/dist/avro/avro-1.8.2/java/avro-tools-1.8.2.jar
 
 ARG SCHEMAS_VERSION=${RADAR_SCHEMAS_VERSION}
 
