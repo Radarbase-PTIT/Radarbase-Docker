@@ -16,7 +16,7 @@ RUN wget https://github.com/yahoo/kafka-manager/archive/${KM_VERSION}.tar.gz && 
     unzip  -d / ./target/universal/kafka-manager-${KM_VERSION}.zip && \
     mv /kafka-manager-${KM_VERSION} /kafka-manager
 
-FROM openjdk:8-alpine
+FROM openjdk:8u92-alpine
 MAINTAINER Yatharth Ranjan <https://github.com/yatharthranjan>
 
 ENV ZK_HOSTS=zookeeper-1:2181

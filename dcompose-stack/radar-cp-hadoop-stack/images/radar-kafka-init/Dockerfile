@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM openjdk:8u92-alpine
 
 MAINTAINER Joris Borgdorff <joris@thehyve.nl>
 
